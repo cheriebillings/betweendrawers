@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { 
   Menu, X, ArrowRight, BookOpen, 
   Sparkles, DollarSign, Calendar, Mail,
@@ -8,10 +9,16 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 
+import GuidesPage from '@/pages/GuidesPage';
+import TipsPage from '@/pages/TipsPage';
+import ReviewsPage from '@/pages/ReviewsPage';
+import BudgetPage from '@/pages/BudgetPage';
+
 // Navigation Component
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -19,13 +26,12 @@ function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: 'Guides', href: '#guides' },
-    { name: 'Tips', href: '#tips' },
-    { name: 'Reviews', href: '#reviews' },
-    { name: 'Budget', href: '#budget' },
-    { name: 'About', href: '#about' },
-  ];
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -33,30 +39,59 @@ function Navigation() {
     }`}>
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-xl font-semibold tracking-tight" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+          <Link
+            to="/"
+            className="text-xl font-semibold tracking-tight text-stone-900 hover:text-stone-700 transition-colors"
+            style={{ fontFamily: 'Cormorant Garamond, serif' }}
+          >
             BetweenDrawers
-          </a>
+          </Link>
           
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href} 
-                className="text-sm text-stone-600 hover:text-stone-900 transition-colors"
-              >
-                {link.name}
-              </a>
-            ))}
-            <Button size="sm" className="bg-stone-800 hover:bg-stone-700 text-white rounded-full px-5">
-              Subscribe
-            </Button>
+            <Link
+              to="/guides"
+              className={`text-sm transition-colors ${isActive('/guides') ? 'text-stone-900 font-medium' : 'text-stone-600 hover:text-stone-900'}`}
+            >
+              Guides
+            </Link>
+            <Link
+              to="/tips"
+              className={`text-sm transition-colors ${isActive('/tips') ? 'text-stone-900 font-medium' : 'text-stone-600 hover:text-stone-900'}`}
+            >
+              Tips
+            </Link>
+            <Link
+              to="/reviews"
+              className={`text-sm transition-colors ${isActive('/reviews') ? 'text-stone-900 font-medium' : 'text-stone-600 hover:text-stone-900'}`}
+            >
+              Reviews
+            </Link>
+            <Link
+              to="/budget"
+              className={`text-sm transition-colors ${isActive('/budget') ? 'text-stone-900 font-medium' : 'text-stone-600 hover:text-stone-900'}`}
+            >
+              Budget
+            </Link>
+            <a
+              href="#about"
+              className="text-sm text-stone-600 hover:text-stone-900 transition-colors"
+            >
+              About
+            </a>
+            <Link to="/#subscribe">
+              <Button size="sm" className="bg-stone-800 hover:bg-stone-700 text-white rounded-full px-5">
+                Subscribe
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button 
             className="md:hidden p-2"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -65,19 +100,46 @@ function Navigation() {
         {/* Mobile Nav */}
         {isOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-stone-200 pt-4">
-            {navLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href} 
-                className="block py-2 text-stone-600 hover:text-stone-900"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </a>
-            ))}
-            <Button className="mt-4 w-full bg-stone-800 hover:bg-stone-700 text-white rounded-full">
-              Subscribe
-            </Button>
+            <Link
+              to="/guides"
+              className="block py-2 text-stone-600 hover:text-stone-900"
+              onClick={() => setIsOpen(false)}
+            >
+              Guides
+            </Link>
+            <Link
+              to="/tips"
+              className="block py-2 text-stone-600 hover:text-stone-900"
+              onClick={() => setIsOpen(false)}
+            >
+              Tips
+            </Link>
+            <Link
+              to="/reviews"
+              className="block py-2 text-stone-600 hover:text-stone-900"
+              onClick={() => setIsOpen(false)}
+            >
+              Reviews
+            </Link>
+            <Link
+              to="/budget"
+              className="block py-2 text-stone-600 hover:text-stone-900"
+              onClick={() => setIsOpen(false)}
+            >
+              Budget
+            </Link>
+            <a
+              href="#about"
+              className="block py-2 text-stone-600 hover:text-stone-900"
+              onClick={() => setIsOpen(false)}
+            >
+              About
+            </a>
+            <Link to="/#subscribe" onClick={() => setIsOpen(false)}>
+              <Button className="mt-4 w-full bg-stone-800 hover:bg-stone-700 text-white rounded-full">
+                Subscribe
+              </Button>
+            </Link>
           </div>
         )}
       </div>
@@ -104,13 +166,17 @@ function HeroSection() {
               practical tips, and strategies for creating order—without the overwhelm.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button className="bg-stone-800 hover:bg-stone-700 text-white rounded-full px-6 py-5 text-sm">
-                Browse Guides
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-              <Button variant="outline" className="rounded-full px-6 py-5 text-sm border-stone-300 hover:bg-stone-100">
-                Meet Cherie
-              </Button>
+              <Link to="/guides">
+                <Button className="bg-stone-800 hover:bg-stone-700 text-white rounded-full px-6 py-5 text-sm">
+                  Browse Guides
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </Link>
+              <a href="#about">
+                <Button variant="outline" className="rounded-full px-6 py-5 text-sm border-stone-300 hover:bg-stone-100">
+                  Meet Cherie
+                </Button>
+              </a>
             </div>
             <div className="flex gap-8 pt-4">
               <div>
@@ -151,7 +217,7 @@ function HeroSection() {
 // Featured Guide Section
 function FeaturedGuide() {
   return (
-    <section id="guides" className="py-20 px-6 bg-white">
+    <section className="py-20 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-8">
           <Sparkles className="w-5 h-5 text-amber-600" />
@@ -183,10 +249,12 @@ function FeaturedGuide() {
                 <Calendar className="w-4 h-4" /> March 2026
               </span>
             </div>
-            <Button className="bg-stone-800 hover:bg-stone-700 text-white rounded-full px-6">
-              Read Guide
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
+            <Link to="/guides">
+              <Button className="bg-stone-800 hover:bg-stone-700 text-white rounded-full px-6">
+                Read Guide
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -246,9 +314,9 @@ function TopicCategories() {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat) => (
-            <a 
+            <Link 
               key={cat.name} 
-              href="#" 
+              to="/guides"
               className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="aspect-[16/9] overflow-hidden">
@@ -265,7 +333,7 @@ function TopicCategories() {
                 </div>
                 <p className="text-sm text-stone-600 line-clamp-2">{cat.description}</p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
@@ -300,21 +368,23 @@ function LatestTips() {
   ];
 
   return (
-    <section id="tips" className="py-20 px-6 bg-white">
+    <section className="py-20 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-10">
           <div>
             <h2 className="text-3xl md:text-4xl text-stone-900 mb-2">Latest Tips</h2>
             <p className="text-stone-600">Practical strategies you can implement today</p>
           </div>
-          <Button variant="outline" className="hidden md:flex rounded-full border-stone-300">
-            View All Tips
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
+          <Link to="/tips">
+            <Button variant="outline" className="hidden md:flex rounded-full border-stone-300">
+              View All Tips
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
+          </Link>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {tips.map((tip, idx) => (
-            <article key={idx} className="group cursor-pointer">
+            <Link key={idx} to="/tips" className="group cursor-pointer">
               <div className="aspect-[4/3] rounded-xl overflow-hidden bg-stone-100 mb-5">
                 <img 
                   src={tip.image} 
@@ -336,13 +406,15 @@ function LatestTips() {
                   {tip.excerpt}
                 </p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
-        <Button variant="outline" className="md:hidden w-full mt-8 rounded-full border-stone-300">
-          View All Tips
-          <ArrowRight className="ml-2 w-4 h-4" />
-        </Button>
+        <Link to="/tips">
+          <Button variant="outline" className="md:hidden w-full mt-8 rounded-full border-stone-300">
+            View All Tips
+            <ArrowRight className="ml-2 w-4 h-4" />
+          </Button>
+        </Link>
       </div>
     </section>
   );
@@ -372,7 +444,7 @@ function BudgetStrategies() {
   ];
 
   return (
-    <section id="budget" className="py-20 px-6 bg-stone-900 text-white">
+    <section className="py-20 px-6 bg-stone-900 text-white">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-start mb-12">
           <div>
@@ -419,12 +491,20 @@ function BudgetStrategies() {
             </div>
           ))}
         </div>
+        <div className="mt-10 text-center">
+          <Link to="/budget">
+            <Button variant="outline" className="rounded-full border-stone-600 text-stone-300 hover:bg-stone-800 hover:text-white">
+              See Full Budget Guide
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
+          </Link>
+        </div>
       </div>
     </section>
   );
 }
 
-// Product Reviews Section (Content-focused, no e-commerce ratings)
+// Product Reviews Section
 function ProductReviews() {
   const reviews = [
     {
@@ -457,7 +537,7 @@ function ProductReviews() {
   ];
 
   return (
-    <section id="reviews" className="py-20 px-6 bg-[#faf8f5]">
+    <section className="py-20 px-6 bg-[#faf8f5]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14">
           <Badge variant="secondary" className="bg-stone-200 text-stone-700 rounded-full mb-4">
@@ -527,10 +607,12 @@ function ProductReviews() {
           ))}
         </div>
         <div className="text-center mt-10">
-          <Button variant="outline" className="rounded-full border-stone-300">
-            See All Reviews
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
+          <Link to="/reviews">
+            <Button variant="outline" className="rounded-full border-stone-300">
+              See All Reviews
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
@@ -593,7 +675,7 @@ function AboutSection() {
 // Newsletter Section
 function NewsletterSection() {
   return (
-    <section className="py-20 px-6 bg-[#faf8f5]">
+    <section id="subscribe" className="py-20 px-6 bg-[#faf8f5]">
       <div className="max-w-2xl mx-auto text-center">
         <Mail className="w-10 h-10 text-stone-400 mx-auto mb-6" />
         <h2 className="text-3xl md:text-4xl text-stone-900 mb-4">
@@ -636,9 +718,13 @@ function NewsletterSection() {
 // Footer
 function Footer() {
   const links = {
-    explore: ['Closet Systems', 'Pantry Guides', 'Bathroom Tips', 'Product Reviews'],
+    explore: [
+      { label: 'All Guides', to: '/guides' },
+      { label: 'Quick Tips', to: '/tips' },
+      { label: 'Product Reviews', to: '/reviews' },
+      { label: 'Budget Strategies', to: '/budget' },
+    ],
     company: ['About Cherie', 'All Guides', 'Contact', 'Work With Us'],
-    connect: ['@BetweenDrawers', 'Tampa Bay, FL']
   };
 
   return (
@@ -646,25 +732,28 @@ function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-4 gap-10 mb-12">
           <div className="md:col-span-2">
-            <a href="#" className="text-2xl font-semibold text-stone-900 mb-4 block" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+            <Link to="/" className="text-2xl font-semibold text-stone-900 mb-4 block" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
               BetweenDrawers
-            </a>
+            </Link>
             <p className="text-stone-600 text-sm leading-relaxed max-w-sm mb-4">
               Organization tips, honest product reviews, and practical strategies for 
               calm, organized spaces. Written by Cherie from real rental-living experience.
             </p>
             <p className="text-xs text-stone-400">
-              Made with love in Tampa Bay
+              Made with love in Tampa Bay &middot; Sister brand to{' '}
+              <a href="https://betweenstaysco.com" className="underline hover:text-stone-600" target="_blank" rel="noopener noreferrer">
+                BetweenStaysCo.com
+              </a>
             </p>
           </div>
           <div>
             <p className="text-xs font-medium text-stone-400 uppercase tracking-wider mb-4">Explore</p>
             <ul className="space-y-2">
-              {links.explore.map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-sm text-stone-600 hover:text-stone-900 transition-colors">
-                    {link}
-                  </a>
+              {links.explore.map(({ label, to }) => (
+                <li key={label}>
+                  <Link to={to} className="text-sm text-stone-600 hover:text-stone-900 transition-colors">
+                    {label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -687,7 +776,10 @@ function Footer() {
             © 2026 BetweenDrawers. All rights reserved.
           </p>
           <p className="text-xs text-stone-400">
-            A sister brand to <a href="#" className="underline hover:text-stone-600">BetweenStaysCo.com</a>
+            A sister brand to{' '}
+            <a href="https://betweenstaysco.com" className="underline hover:text-stone-600" target="_blank" rel="noopener noreferrer">
+              BetweenStaysCo.com
+            </a>
           </p>
         </div>
       </div>
@@ -695,11 +787,10 @@ function Footer() {
   );
 }
 
-// Main App
-function App() {
+// Home page — all existing sections
+function HomePage() {
   return (
     <div className="min-h-screen bg-[#faf8f5]">
-      <Navigation />
       <main>
         <HeroSection />
         <FeaturedGuide />
@@ -715,4 +806,26 @@ function App() {
   );
 }
 
-export default App;
+// Root App — wrapped in HashRouter
+function AppRoutes() {
+  return (
+    <>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/guides" element={<GuidesPage />} />
+        <Route path="/tips" element={<TipsPage />} />
+        <Route path="/reviews" element={<ReviewsPage />} />
+        <Route path="/budget" element={<BudgetPage />} />
+      </Routes>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <HashRouter>
+      <AppRoutes />
+    </HashRouter>
+  );
+}
