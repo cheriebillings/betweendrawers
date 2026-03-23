@@ -24,17 +24,13 @@ export default function BathroomStorageArticle() {
       <article className="px-6 py-12">
         <div className="max-w-2xl mx-auto prose-stone">
 
-          <p className="text-stone-600 leading-relaxed mb-5">Let me paint you a picture.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">There was a flip flop under the bathroom sink. One flip flop. Not a pair — one single flip flop. We had been in that home for eight months. It wasn't mine. I asked Matt. It wasn't his. We moved out and left it there because honestly, what do you do with one flip flop.</p>
 
-          <p className="text-stone-600 leading-relaxed mb-5">It's 7:15 a.m., I need to be out the door by 7:30, and I am on my hands and knees in the bathroom cabinet trying to locate my face wash behind a nest of pipes, a rogue bottle of Matt's 2-in-1 shampoo conditioner, a travel case I'm pretty sure still has airport security liquids rules in my head from two homes ago, and — I kid you not — a single flip flop.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">This is the thing about furnished homes: the under-sink cabinet comes pre-seasoned with mysteries. Previous tenants leave behind the evidence of their own organizational struggles — rogue bottles, mystery cleaning products, pipe covers someone thought were storage, and in our case, apparently, footwear. And underneath all of that is the actual obstacle: the plumbing. Cold water line on the left, hot on the right, drain pipe doing whatever it wants in the middle. Every single home is different. Every pipe configuration is a surprise.</p>
 
-          <p className="text-stone-600 leading-relaxed mb-5">One flip flop. We had been in that home for eight months. I don't know whose it was.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">I can't drill into any of these spaces. Can't glue, can't screw in a bracket, can't do anything permanent. So over time I've developed a setup that works entirely around the pipes, fits inside whatever cabinet I land in, and packs up in about ten minutes when it's time to go somewhere new.</p>
 
-          <p className="text-stone-600 leading-relaxed mb-5">This is the reality of under-sink storage in a furnished bathroom. You've got a cabinet that looks like it should hold things, but actually holds a maze of plumbing. Cold water line on the left, hot water line on the right, drain pipe going wherever the heck it wants. There's maybe eighteen inches of actual usable space if you're lucky, and most of that is awkward around the pipes.</p>
-
-          <p className="text-stone-600 leading-relaxed mb-5">Matt and I have been living as nomadic remote workers for several years — moving every few months into different furnished homes across the country, from Tampa to the Pacific Northwest and everywhere in between. Every bathroom cabinet has been different. Every pipe configuration has been a surprise. And since we don't own any of these spaces, drilling a single hook or gluing a single shelf bracket is not on the table.</p>
-
-          <p className="text-stone-600 leading-relaxed mb-5">So I've gotten good at this. Not Pinterest good. Real-life good. The kind of good that comes from solving the same problem over and over in a lot of different rooms. Here's what actually works.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">Not Pinterest-perfect. Actually functional. Here's exactly what I use and why.</p>
 
           <hr className="border-stone-200 my-8" />
 

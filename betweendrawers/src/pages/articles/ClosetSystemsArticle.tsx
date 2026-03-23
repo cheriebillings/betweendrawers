@@ -24,13 +24,15 @@ export default function ClosetSystemsArticle() {
       <article className="px-6 py-12">
         <div className="max-w-2xl mx-auto prose-stone">
 
-          <p className="text-stone-600 leading-relaxed mb-5">The first thing I do when we move into a new furnished home is open every closet door and just... stand there. Not in a good way. More like the way you stand in front of a broken-down car, mentally calculating what it's going to cost you.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">I want to tell you about the Tampa closet. Not because it was the worst one we've had — though it was a strong contender — but because it's the one that finally made me stop hoping and start solving.</p>
 
-          <p className="text-stone-600 leading-relaxed mb-5">Matt and I have been doing the nomadic remote-work thing for several years now — moving into different furnished homes every few months, unpacking our bags in a new city, making it work. But I will not pretend the closets have ever been on my side. We've been through a home with one single rod, no shelf, and the floor space eaten up by a water heater that had no business in a bedroom closet. Before that, a walk-in with three shelves crammed so high up the wall I needed a step stool to reach my own sweaters. Matt could reach them fine, obviously, because the universe has a sense of humor.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">It wasn't technically a closet. It was a converted alcove off the bedroom with a curtain for a door. A curtain. The kind you push aside dramatically like you're making an entrance. There was one rod, no shelf, and exactly enough floor space for me to stand in it and feel personally wronged. Matt's solution was to drape his entire wardrobe over the single rod and call it a system. I disagreed with this approach.</p>
 
-          <p className="text-stone-600 leading-relaxed mb-5">We spent time in a place in Tampa where the "closet" was a converted nook with a curtain instead of a door. There was a curtain. Just a curtain.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">I've also dealt with: a walk-in where all three shelves were installed so high I needed a step stool to reach my own sweaters (Matt was fine — obviously), a reach-in that shared floor space with a water heater that had no business being in a bedroom, and one very confident closet in the Southwest that was clearly designed by someone who had never actually used a closet.</p>
 
-          <p className="text-stone-600 leading-relaxed mb-5">But here's what I've figured out after organizing closets across multiple states and a dozen furnished homes: you don't need to drill a single hole to make any closet work. You need the right approach and a few solid tools that travel with you. The closet is always different. The system doesn't have to be.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">Here's what every single one of those experiences taught me: the closet doesn't have to cooperate. You just need the right tools and a system that works regardless of what you walk into. No drilling, no permanent changes, nothing that can't pack up when it's time to go.</p>
+
+          <p className="text-stone-600 leading-relaxed mb-5">The curtain-closet in Tampa? By week two it was genuinely functional. Here's exactly how I do it.</p>
 
           <hr className="border-stone-200 my-8" />
 

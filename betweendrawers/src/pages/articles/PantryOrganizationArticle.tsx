@@ -26,15 +26,13 @@ export default function PantryOrganizationArticle() {
 
           <h2 className="text-2xl text-stone-900 mt-10 mb-4" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 500 }}>The Pantry That Was Actively Working Against Me</h2>
 
-          <p className="text-stone-600 leading-relaxed mb-5">The first time I opened the pantry in the furnished home we moved into in Colorado last year, a can of black beans fell out and hit the floor. Just — boom. Right out of the gate. Welcome.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">We have a cumin problem. Or rather, we had a cumin problem — the kind where you can't find your cumin, assume you're out, buy more cumin, and then move out of the home six months later and find three jars of cumin living in the back corner of the pantry where the shelf goes so deep that things just quietly disappear and you never see them again.</p>
 
-          <p className="text-stone-600 leading-relaxed mb-5">The cabinet itself wasn't small. It was actually a decent size. But whoever designed it thought one fixed shelf in the middle was enough. So everything piled up in two enormous zones: the floor-level chaos zone, and the "I need a stepstool and good luck" top zone. Cans stacked on cans. A mystery bag of something shoved way in the back. Cereal boxes tipped sideways because there was no good way to stand them up. Matt opened it one morning, stared at it for a solid ten seconds, and quietly closed it again. That was the moment I knew it was time.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">This is not a cumin-specific issue. We've done this with olive oil, with pasta, with a truly alarming number of canned goods from a brand I don't even remember buying. The pantry in the Colorado place was the worst for this. Big cabinet, one fixed shelf in the middle, which created two zones: the "dump things on the floor" zone and the "need a stepstool and prayer" zone. Everything was buried. Matt opened it one morning, stared into it for a long moment like a man reckoning with his choices, and quietly closed it. I started making a list.</p>
 
-          <p className="text-stone-600 leading-relaxed mb-5">Here's the thing about being a remote worker who moves into a different furnished home every few months: I've now organized a lot of kitchens. I've dealt with pantry setups in probably a dozen different places across the country over the past several years — in Tampa, in the Southwest, in the Pacific Northwest, and everywhere in between. Every single one has been different. Every single one has had some version of "one random fixed shelf and a lot of wasted space." I have gotten genuinely good at cracking this particular puzzle.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">The thing is — I know how to fix a pantry now. Not because I'm naturally organized (I am not) but because I've dealt with this exact problem in kitchens across multiple states and the solution is always basically the same. It costs about forty dollars. It takes an afternoon. And it makes a genuinely annoying part of daily life much, much calmer.</p>
 
-          <p className="text-stone-600 leading-relaxed mb-5">And the good news is: you don't need a renovation. You need about forty bucks and an afternoon.</p>
-
-          <p className="text-stone-600 leading-relaxed mb-5">Here's exactly what I do, regardless of what the pantry looks like when I get there.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">Here's the whole system, step by step.</p>
 
           <hr className="border-stone-200 my-8" />
 

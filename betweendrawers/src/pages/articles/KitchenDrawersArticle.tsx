@@ -26,17 +26,15 @@ export default function KitchenDrawersArticle() {
 
           <h2 className="text-2xl text-stone-900 mt-10 mb-4" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 500 }}>The Drawer I Kept Pretending Didn't Exist</h2>
 
-          <p className="text-stone-600 leading-relaxed mb-5">There's a drawer in every kitchen that nobody talks about. You know the one. It's the drawer you yank open with one hand while holding something with the other, shove whatever's in your hand inside, and slam shut before anything can fall out. You don't actually look in it. You just add to it.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">I was trying to make dinner. Real dinner, not cereal. I needed the meat thermometer, which I knew for a fact we owned because I had used it three weeks earlier. What I did not know was where it had gone in the meantime.</p>
 
-          <p className="text-stone-600 leading-relaxed mb-5">We had one of those drawers in the furnished home we were staying in last fall — right next to the stove, which is prime real estate for chaos. And I am not exaggerating when I say I once found a takeout menu from a restaurant that had permanently closed, a mystery key, three dried-up pens, two batteries I wasn't sure were dead, a single birthday candle, and — I still don't know how — a golf tee. Matt doesn't even golf.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">I checked the drawer next to the stove. Then I dug through it. Then I actually lifted things out and set them on the counter, which is when I found: a takeout menu from a restaurant that had permanently closed, a mystery key, three dried-up pens, two batteries I wasn't sure were dead, a single birthday candle, and — I still have no explanation for this — a golf tee. Matt doesn't golf. He has never golfed. I did not ask questions. I just stood there holding a golf tee at 6:30 p.m. while the chicken sat on the counter doing whatever chicken does at room temperature.</p>
 
-          <p className="text-stone-600 leading-relaxed mb-5">Every time I was actually trying to cook something and needed the kitchen scissors or the meat thermometer, I'd dig through that drawer like I was looking for buried treasure. I'd find everything except the thing I needed. And then I'd just close it, grab a different knife, or Google how long to cook chicken with absolutely no thermometer and pray for the best.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">I Googled "how long to cook chicken without a thermometer and not die." I made dinner. And then the next morning I fixed the drawer.</p>
 
-          <p className="text-stone-600 leading-relaxed mb-5">Matt and I are remote workers — we've spent several years moving from furnished home to furnished home, unpacking our bags in a new city, figuring out a new kitchen, a new closet, a new everything. It used to give me a mental block about organizing. A drawer that isn't "mine" in a home I'm only in for a season? Why bother?</p>
+          <p className="text-stone-600 leading-relaxed mb-5">Here's what I've figured out from setting up kitchens in more furnished homes than I can count at this point: the junk drawer isn't a personality flaw. It's an infrastructure problem. It exists because nobody decided what the drawer was actually for. Once you decide that, the whole thing sorts itself out. Literally.</p>
 
-          <p className="text-stone-600 leading-relaxed mb-5">Because you still live there every single day. The chaos is still your chaos.</p>
-
-          <p className="text-stone-600 leading-relaxed mb-5">So one Saturday last fall, I finally fixed that drawer. And honestly? It changed my kitchen life more than anything else I'd done in months. Here's exactly how.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">Here's how I did it — and how I've replicated it in every kitchen we've landed in since.</p>
 
           <hr className="border-stone-200 my-8" />
 
