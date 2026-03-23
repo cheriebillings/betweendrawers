@@ -503,7 +503,7 @@ function SmartShoppingTips() {
           >
             Buy Less, Choose Wisely
           </h2>
-          <p className="text-stone-600">Rules from 3 years of organizing rental spaces on a real budget.</p>
+          <p className="text-stone-600">Rules from several years of organizing furnished spaces on a real budget.</p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

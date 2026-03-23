@@ -167,7 +167,7 @@ function HeroSection() {
               Calm, Organized Spaces
             </h1>
             <p className="text-lg text-stone-600 leading-relaxed max-w-md">
-              Hi, I'm Cherie. After three years living in furnished rentals, I've learned 
+              Hi, I'm Cherie. After several years living in furnished homes, I've learned 
               what organization systems actually work. Here, I share honest reviews, 
               practical tips, and strategies for creating order—without the overwhelm.
             </p>
@@ -640,7 +640,7 @@ function AboutSection() {
             </h2>
             <div className="space-y-4 text-stone-600 leading-relaxed">
               <p>
-                For nearly three years, my husband Matt and I have lived exclusively in 
+                For several years, my husband Matt and I have lived exclusively in 
                 furnished vacation and corporate rentals. We've called dozens of spaces 
                 "home"—each with different closets, drawers, and storage challenges.
               </p>

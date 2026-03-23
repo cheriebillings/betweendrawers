@@ -32,7 +32,7 @@ export default function BathroomStorageArticle() {
 
           <p className="text-stone-600 leading-relaxed mb-5">This is the reality of under-sink storage in a furnished bathroom. You've got a cabinet that looks like it should hold things, but actually holds a maze of plumbing. Cold water line on the left, hot water line on the right, drain pipe going wherever the heck it wants. There's maybe eighteen inches of actual usable space if you're lucky, and most of that is awkward around the pipes.</p>
 
-          <p className="text-stone-600 leading-relaxed mb-5">Matt and I have been living as nomadic remote workers for about three years — moving every few months into different furnished homes across the country, from Tampa to the Pacific Northwest and everywhere in between. Every bathroom cabinet has been different. Every pipe configuration has been a surprise. And since we don't own any of these spaces, drilling a single hook or gluing a single shelf bracket is not on the table.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">Matt and I have been living as nomadic remote workers for several years — moving every few months into different furnished homes across the country, from Tampa to the Pacific Northwest and everywhere in between. Every bathroom cabinet has been different. Every pipe configuration has been a surprise. And since we don't own any of these spaces, drilling a single hook or gluing a single shelf bracket is not on the table.</p>
 
           <p className="text-stone-600 leading-relaxed mb-5">So I've gotten good at this. Not Pinterest good. Real-life good. The kind of good that comes from solving the same problem over and over in a lot of different rooms. Here's what actually works.</p>
 

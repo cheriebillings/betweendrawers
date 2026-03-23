@@ -24,11 +24,11 @@ export default function LabelingSystemsArticle() {
       <article className="px-6 py-12">
         <div className="max-w-2xl mx-auto prose-stone">
 
-          <p className="text-stone-600 leading-relaxed mb-5">Here's my confession: I have started no fewer than six labeling systems in the last three years. Six. And I don't mean I tweaked the same system — I mean I started from scratch each time, convinced that <em>this</em> time I had cracked it, only to watch it quietly collapse within a few weeks.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">Here's my confession: I have started no fewer than six labeling systems over the past several years. Six. And I don't mean I tweaked the same system — I mean I started from scratch each time, convinced that <em>this</em> time I had cracked it, only to watch it quietly collapse within a few weeks.</p>
 
           <p className="text-stone-600 leading-relaxed mb-5">The label maker I impulse-bought in 2023 lived in the back of a drawer for months. The chalkboard tags I ordered off Amazon were still in the packaging when we moved out of the home I bought them for. At some point I printed a whole set of color-coded labels for a bathroom cabinet. Matt started ignoring them, and honestly, so did I.</p>
 
-          <p className="text-stone-600 leading-relaxed mb-5">Here's the context: Matt and I are remote workers who travel around the country, living in different furnished homes every few months. We've been doing this for about three years — places in Tampa, in the Southwest, in the Pacific Northwest, and elsewhere. Every home has had different cabinet depths, different shelf configurations, different amounts of "where does <em>this</em> even go?" I've been setting up organization systems from scratch over and over, in spaces I don't own and won't be in forever.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">Here's the context: Matt and I are remote workers who travel around the country, living in different furnished homes every few months. We've been doing this for several years — places in Tampa, in the Southwest, in the Pacific Northwest, and elsewhere. Every home has had different cabinet depths, different shelf configurations, different amounts of "where does <em>this</em> even go?" I've been setting up organization systems from scratch over and over, in spaces I don't own and won't be in forever.</p>
 
           <p className="text-stone-600 leading-relaxed mb-5">And after all of that, I finally figured out what was actually going wrong. It wasn't the label makers. It wasn't Matt. It was me, being too specific.</p>
 
@@ -102,7 +102,7 @@ export default function LabelingSystemsArticle() {
 
           <p className="text-stone-600 leading-relaxed mb-5">I've set up this system in furnished homes from Florida to the Pacific Northwest. Different cabinet depths. Different layouts. The labels are always the same. The only thing that changes is which shelf the bin sits on.</p>
 
-          <p className="text-stone-600 leading-relaxed mb-5">That's the whole secret I spent three years and several Amazon orders figuring out. Build the system for your life, not for the room you're in. Then it travels with you.</p>
+          <p className="text-stone-600 leading-relaxed mb-5">That's the whole secret I spent several years and several Amazon orders figuring out. Build the system for your life, not for the room you're in. Then it travels with you.</p>
 
           <hr className="border-stone-200 my-8" />
 

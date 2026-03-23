@@ -32,7 +32,7 @@ export default function KitchenDrawersArticle() {
 
           <p className="text-stone-600 leading-relaxed mb-5">Every time I was actually trying to cook something and needed the kitchen scissors or the meat thermometer, I'd dig through that drawer like I was looking for buried treasure. I'd find everything except the thing I needed. And then I'd just close it, grab a different knife, or Google how long to cook chicken with absolutely no thermometer and pray for the best.</p>
 
-          <p className="text-stone-600 leading-relaxed mb-5">Matt and I are remote workers — we've spent the last three years moving from furnished home to furnished home, unpacking our bags in a new city, figuring out a new kitchen, a new closet, a new everything. It used to give me a mental block about organizing. A drawer that isn't "mine" in a home I'm only in for a season? Why bother?</p>
+          <p className="text-stone-600 leading-relaxed mb-5">Matt and I are remote workers — we've spent several years moving from furnished home to furnished home, unpacking our bags in a new city, figuring out a new kitchen, a new closet, a new everything. It used to give me a mental block about organizing. A drawer that isn't "mine" in a home I'm only in for a season? Why bother?</p>
 
           <p className="text-stone-600 leading-relaxed mb-5">Because you still live there every single day. The chaos is still your chaos.</p>
 
