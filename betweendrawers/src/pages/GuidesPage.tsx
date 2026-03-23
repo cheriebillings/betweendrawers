@@ -20,36 +20,42 @@ const allGuides = [
     excerpt: 'The one step that prevents returns. A foolproof measuring method and what numbers actually matter.',
     time: '8 min', date: 'March 12, 2026',
     img: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=75',
+    to: '/articles/kitchen-drawers',
   },
   {
     id: 2, cat: 'Bathroom', catId: 'bathroom', title: 'Under-Sink Storage That Survives a Plumber Visit',
     excerpt: 'Rental-friendly bins, removable shelves, and a layout that makes it easy to get everything out — and back in — fast.',
     time: '10 min', date: 'Feb 28, 2026',
     img: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=75',
+    to: '/articles/bathroom-storage',
   },
   {
     id: 3, cat: 'Pantry', catId: 'pantry', title: 'The $40 Pantry Makeover Using Freestanding Shelves',
     excerpt: 'No drilling, no landlord calls. Three freestanding shelves, some labels, and a lazy Susan transformed this kitchen.',
     time: '12 min', date: 'Feb 14, 2026',
     img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=75',
+    to: '/articles/pantry-organization',
   },
   {
     id: 4, cat: 'Linen', catId: 'linen', title: 'The Ranger Roll and 3 Other Folds That Actually Fit a Rental Linen Closet',
     excerpt: 'Why your folding method matters more than your storage containers — and four techniques that make small shelves work.',
     time: '9 min', date: 'Jan 30, 2026',
     img: 'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=600&q=75',
+    to: '/articles/linen-laundry',
   },
   {
     id: 5, cat: 'Labeling', catId: 'labeling', title: 'A Labeling System You\'ll Actually Maintain',
     excerpt: 'Labels fail when they\'re too specific or too vague. Here\'s how to name categories so the system still works months later.',
     time: '7 min', date: 'Jan 18, 2026',
     img: 'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=75',
+    to: '/articles/labeling-systems',
   },
   {
     id: 6, cat: 'Closet', catId: 'closets', title: 'Studio Closet Solutions: When You Have 24 Inches of Rod Space',
     excerpt: 'The smallest closets call for the smartest systems. A real studio setup using only $67 worth of products.',
     time: '11 min', date: 'Jan 5, 2026',
     img: 'https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?w=600&q=75',
+    to: '/articles/closet-systems',
   },
 ];
 
@@ -186,9 +192,9 @@ export default function GuidesPage() {
                   </li>
                 ))}
               </ul>
-              <Button className="bg-stone-800 hover:bg-stone-700 text-white rounded-full self-start">
+              <Link to="/articles/closet-systems" className="inline-flex items-center bg-stone-800 hover:bg-stone-700 text-white rounded-full self-start px-5 py-2.5 text-sm font-semibold transition-colors">
                 Read the Full Guide <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+              </Link>
             </div>
           </article>
         </div>
@@ -235,9 +241,9 @@ export default function GuidesPage() {
                   <p className="text-sm text-stone-500 leading-relaxed mb-4">{guide.excerpt}</p>
                   <div className="flex items-center justify-between text-xs text-stone-400 border-t border-stone-100 pt-4">
                     <span className="flex items-center gap-1"><Calendar className="w-3 h-3" />{guide.date}</span>
-                    <a href="#" className="text-[#B87748] font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+                    <Link to={guide.to} className="text-[#B87748] font-semibold flex items-center gap-1 hover:gap-2 transition-all">
                       Read guide <ArrowRight className="w-3 h-3" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </article>

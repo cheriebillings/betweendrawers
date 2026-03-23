@@ -13,6 +13,12 @@ import GuidesPage from '@/pages/GuidesPage';
 import TipsPage from '@/pages/TipsPage';
 import ReviewsPage from '@/pages/ReviewsPage';
 import BudgetPage from '@/pages/BudgetPage';
+import KitchenDrawersArticle from '@/pages/articles/KitchenDrawersArticle';
+import ClosetSystemsArticle from '@/pages/articles/ClosetSystemsArticle';
+import PantryOrganizationArticle from '@/pages/articles/PantryOrganizationArticle';
+import BathroomStorageArticle from '@/pages/articles/BathroomStorageArticle';
+import LinenLaundryArticle from '@/pages/articles/LinenLaundryArticle';
+import LabelingSystemsArticle from '@/pages/articles/LabelingSystemsArticle';
 
 // Navigation Component
 function Navigation() {
@@ -817,6 +823,12 @@ function AppRoutes() {
         <Route path="/tips" element={<TipsPage />} />
         <Route path="/reviews" element={<ReviewsPage />} />
         <Route path="/budget" element={<BudgetPage />} />
+        <Route path="/articles/kitchen-drawers" element={<KitchenDrawersArticle />} />
+        <Route path="/articles/closet-systems" element={<ClosetSystemsArticle />} />
+        <Route path="/articles/pantry-organization" element={<PantryOrganizationArticle />} />
+        <Route path="/articles/bathroom-storage" element={<BathroomStorageArticle />} />
+        <Route path="/articles/linen-laundry" element={<LinenLaundryArticle />} />
+        <Route path="/articles/labeling-systems" element={<LabelingSystemsArticle />} />
       </Routes>
     </>
   );
